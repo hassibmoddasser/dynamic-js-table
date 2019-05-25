@@ -1,0 +1,19 @@
+{
+  "name": "dynamic-table",
+  "version": "1.0.0",
+  "description": "Dynamic tables enables the user to submit many transactions of a single bill in just one click",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hassibmoddasser/dynamic-table.git"
+  },
+  "author": "hassibmoddasser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hassibmoddasser/dynamic-table/issues"
+  },
+  "homepage": "https://github.com/hassibmoddasser/dynamic-table#readme"
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dynamic Table</title>
+        
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/app.css" type="text/css">
+    </head>
+    <body>
+        <h1 class="display-4 text-center mt-5">Dynamic table</h1>
+        <div class="col-md-8 mx-auto">
+            <form id="form" class="form-horizontal" autocomplete="off">
+                <div class="table-responsive">
+                    <table id="my-table" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%">Product</th>
+                                <th>Unit</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="field">
+                            <tr id="row-0">
+                                <td><input type="text" id="product-0" class="form-control" name="product[]"></td>
+                                <td><input type="text" id="unit-0" class="form-control units" name="unit[]"></td>
+                                <td><input type="number" id="quantity-0" class="form-control" name="qtt[]" oninput="setTotal()" min="0"></td>
+                                <td><input type="number" id="price-0" class="form-control prices" name="price[]" oninput="setTotal()"></td>
+                                <td><input type="text" id="total-0" class="form-control" name="total[]" readonly value="0"></td>
+                                <td><button type="button" id="add" class="btn btn-success"><i class="fa fa-plus"></i></button></td>
+                            </tr>
+                        <tbody>
+                    </table>
+                    <input id="counter" type="hidden" value="1">
+                </div>
+                <div class="col-md-4 ml-auto">
+                    <div class="form-group row">
+                        <label for="sub-total" class="col-md-4 control-label text-bold">Sub total</label>
+                        <div class="col-md-8 no-padding">
+                            <input type="number" id="sub-total" class="form-control" value="0" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ml-auto">
+                    <div class="form-group row">
+                        <label for="discount" class="col-md-4 control-label text-bold">Discount</label>
+                        <div class="col-md-8 no-padding">
+                            <input type="number" id="discount" class="form-control" value="0" min="0" oninput="setPureTotal()">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ml-auto">
+                    <div class="form-group row">
+                        <label for="tax" class="col-md-4 control-label text-bold">Tax</label>
+                        <div class="col-md-8 no-padding">
+                            <input type="number" id="tax" class="form-control" value="0" min="0" max="100" oninput="setPureTotal()">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ml-auto">
+                    <div class="form-group row">
+                        <label for="pure-total" class="col-md-4 control-label text-bold">Total</label>
+                        <div class="col-md-8 no-padding">
+                            <input type="number" id="pure-total" class="form-control" value="0" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 no-padding">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-default" onclick="pageReset()">Cancel</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 text-center">
+                </div>
+            </form>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
