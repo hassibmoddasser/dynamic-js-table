@@ -1,11 +1,12 @@
 # Dynamic table
 
-Dynamic tables enables the user to submit many transactions of a single bill in just one click
+Dynamic tables enables the user to append rows for purchase of sale transactions. Also, it calculates voucher's total payment.
 
 ## Change Log
 
 ### **Ver 1.0.0**
 
-- Calculation of the bill after tax and discount
-- Bootstrap 4.1.3
-- Font Awesome 4.7.0
+- Bootstrap v5.4
+- Font Awesome v5.14
+- Vouchers can have `discount` and `tax`
+- Vouchers' `total` calculations
