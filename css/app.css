@@ -1,18 +1,19 @@
-.form-control {
+body {
+    font-family: 'Kulim Park', sans-serif;
+}
+
+.form-control,
+.btn {
     border-radius: 0px !important;
 }
 
 .table td,
 .table th {
-    padding: 0.45rem;
+    padding: 0.4rem;
 }
 
 .control-label {
     margin: auto;
-}
-
-.form-group {
-    margin-bottom: 0.3rem;
 }
 
 .table>caption+thead>tr:first-child>td,
@@ -25,15 +26,3 @@
     font-size: 14px;
 }
 
-.no-padding {
-    padding: 0px;
-}
-
-.mt-50 {
-    margin-top: 50px;
-}
-
-.text-bold {
-    font-weight: bold;
-    font-size: 14px;
-}
