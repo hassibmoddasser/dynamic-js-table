@@ -31,12 +31,12 @@
                   <th></th>
                 </tr>
               </thead>
-              <tbody id="field">
+              <tbody id="field" class="append-area">
                 <tr id="row-0">
                   <td><input type="text" id="product-0" class="form-control" name="product[]"></td>
                   <td><input type="text" id="unit-0" class="form-control units" name="unit[]"></td>
-                  <td><input type="number" id="quantity-0" class="form-control" name="qtt[]" oninput="setTotal()" min="0"></td>
-                  <td><input type="number" id="price-0" class="form-control prices" name="price[]" oninput="setTotal()"></td>
+                  <td><input type="number" id="quantity-0" class="form-control" name="qtt[]" oninput="setTotal();setGrandTotal();" min="0"></td>
+                  <td><input type="number" id="price-0" class="form-control prices" name="price[]" oninput="setTotal();setGrandTotal();"></td>
                   <td><input type="text" id="total-0" class="form-control" name="total[]" readonly value="0"></td>
                   <td><button type="button" id="add" class="btn btn-secondary"><i class="fa fa-plus"></i></button></td>
                 </tr>
@@ -56,7 +56,7 @@
             <div class="form-group row mb-2">
               <label for="discount" class="col-md-4 control-label font-weight-bold">Discount</label>
               <div class="col-md-8 p-0">
-                <input type="number" id="discount" class="form-control" value="0" min="0" oninput="setPureTotal()">
+                <input type="number" id="discount" class="form-control" value="0" min="0" oninput="setGrandTotal();">
               </div>
             </div>
           </div>
@@ -64,15 +64,15 @@
             <div class="form-group row mb-2">
               <label for="tax" class="col-md-4 control-label font-weight-bold">Tax</label>
               <div class="col-md-8 p-0">
-                <input type="number" id="tax" class="form-control" value="0" min="0" max="100" oninput="setPureTotal()">
+                <input type="number" id="tax" class="form-control" value="0" min="0" max="100" oninput="setGrandTotal();">
               </div>
             </div>
           </div>
           <div class="col-md-4 ml-auto">
             <div class="form-group row mb-2">
-              <label for="pure-total" class="col-md-4 control-label font-weight-bold">Total</label>
+              <label for="grand-total" class="col-md-4 control-label font-weight-bold">Total</label>
               <div class="col-md-8 p-0">
-                <input type="number" id="pure-total" class="form-control" value="0" readonly>
+                <input type="number" id="grand-total" class="form-control" value="0" readonly>
               </div>
             </div>
           </div>
@@ -87,7 +87,6 @@
     </div>
   </div>
 
-  <script src="js/jquery.min.js"></script>
   <!-- App JS -->
   <script src="js/app.js"></script>
 </body>
