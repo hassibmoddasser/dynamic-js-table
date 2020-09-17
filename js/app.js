@@ -7,6 +7,7 @@ const grandTotalUI = document.getElementById('grand-total');
 const appendAreaUI = document.querySelector('.append-area');
 const addButtonUI = document.getElementById('add');
 
+// Append rows to table
 addButtonUI.addEventListener('click', () => {
   let counter = parseInt(document.getElementById('counter').value);
   appendAreaUI.insertAdjacentHTML('beforeend', `
@@ -24,8 +25,7 @@ addButtonUI.addEventListener('click', () => {
   document.getElementById('counter').value = counter;
 });
 
-
-
+// Delete rows of table
 document.addEventListener('click', (e) => {
   let elClassList = e.target.classList;
   if (elClassList.contains('fa-trash') || elClassList.contains('remove')) {
