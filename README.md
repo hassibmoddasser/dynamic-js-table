@@ -4,9 +4,18 @@ Dynamic tables enables the user to append rows for purchase of sale transactions
 
 ## Change Log
 
-### **Ver 1.0.0**
+### **Version 1.0.0**
 
-- Bootstrap v5.4
-- Font Awesome v5.14
-- Vouchers can have `discount` and `tax`
-- Vouchers' `total` calculations
+### **Version 1.1.0**
+
+- Dropped `jQuery`
+- Updated `Bootstrap` to `v5.4`
+- Updated `Font Awesome` to `v5.14`
+- Added Voucher `discount` and `tax`
+- Updated UI elements' style
+
+### **Version 1.2.0**
+
+- New ADD ROW button apart from the table
+- Updated UI elements' style
+- Code optimizations
