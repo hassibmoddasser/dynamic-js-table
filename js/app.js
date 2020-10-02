@@ -25,24 +25,24 @@ addButtonUI.addEventListener('click', () => {
   document.getElementById('counter').value = counter;
 });
 
-// Delete rows of table
+// Delete table rows
 document.addEventListener('click', (e) => {
   let elClassList = e.target.classList;
   if (elClassList.contains('fa-trash') || elClassList.contains('remove')) {
     let removeButtonID = e.target.id;
     document.getElementById('row-' + removeButtonID).remove();
 
-    let tableRows = document.querySelectorAll('#field tr').length;
+    let tableRows = document.querySelectorAll('.append-area tr').length;
     for (let i = 1; i < tableRows; i++) {
-      document.querySelectorAll('#field tr')[i].id = 'row-' + i;
-      document.querySelectorAll('#field tr#row-' + i + ' td input')[0].id = 'product-' + i;
-      document.querySelectorAll('#field tr#row-' + i + ' td input')[1].id = 'unit-' + i;
-      document.querySelectorAll('#field tr#row-' + i + ' td input')[2].id = 'quantity-' + i;
-      document.querySelectorAll('#field tr#row-' + i + ' td input')[3].id = 'price-' + i;
-      document.querySelectorAll('#field tr#row-' + i + ' td input')[4].id = 'total-' + i;
+      document.querySelectorAll('.append-area tr')[i].id = 'row-' + i;
+      document.querySelectorAll('.append-area tr#row-' + i + ' td input')[0].id = 'product-' + i;
+      document.querySelectorAll('.append-area tr#row-' + i + ' td input')[1].id = 'unit-' + i;
+      document.querySelectorAll('.append-area tr#row-' + i + ' td input')[2].id = 'quantity-' + i;
+      document.querySelectorAll('.append-area tr#row-' + i + ' td input')[3].id = 'price-' + i;
+      document.querySelectorAll('.append-area tr#row-' + i + ' td input')[4].id = 'total-' + i;
 
-      document.querySelectorAll('#field tr td button')[i].id = i;
-      document.querySelectorAll('#field tr td button i')[i].id = i;
+      document.querySelectorAll('.append-area tr td button')[i].id = i;
+      document.querySelectorAll('.append-area tr td button i')[i].id = i;
     }
 
     document.getElementById('counter').value = tableRows;
@@ -58,7 +58,7 @@ function pageReset() {
 }
 
 function setTotal() {
-  let tableRows = document.querySelectorAll('tbody#field tr').length;
+  let tableRows = document.querySelectorAll('tbody.append-area tr').length;
 
   let subTotal = 0;
   for (let i = 0; i < tableRows; i++) {
