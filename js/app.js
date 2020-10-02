@@ -12,11 +12,11 @@ addButtonUI.addEventListener('click', () => {
   let counter = parseInt(document.getElementById('counter').value);
   appendAreaUI.insertAdjacentHTML('beforeend', `
     <tr id="row-${counter}">
-      <td><input type="text" id="product-${counter}" class="form-control" name="product[]"></td><td><input type="text" id="unit-${counter}" class="form-control" name="unit[]"</td>
-      <td><input type="number" id="quantity-${counter}" class="form-control" name="qtt[]" oninput="setTotal();setGrandTotal();" min="0"></td>
-      <td><input type="number" id="price-${counter}" class="form-control" name="price[]" oninput="setTotal();setGrandTotal();"></td>
-      <td><input type="text" id="total-${counter}" class="form-control" name="total[]" value="0" disabled="disabled"></td>
-      <td><button type="button" id="${counter}" class="btn btn-danger remove"><i id="${counter}" class="fa fa-trash"></i></button></td>
+      <td><input type="text" id="product-${counter}" class="form-control form-control-sm" name="product[]"></td><td><input type="text" id="unit-${counter}" class="form-control form-control-sm" name="unit[]"</td>
+      <td><input type="number" id="quantity-${counter}" class="form-control form-control-sm" name="qtt[]" oninput="setTotal();setGrandTotal();" min="0"></td>
+      <td><input type="number" id="price-${counter}" class="form-control form-control-sm" name="price[]" oninput="setTotal();setGrandTotal();"></td>
+      <td><input type="text" id="total-${counter}" class="form-control form-control-sm" name="total[]" value="0" disabled="disabled"></td>
+      <td><button type="button" id="${counter}" class="btn btn-danger btn-sm remove"><i id="${counter}" class="fa fa-trash"></i></button></td>
     </tr>
   `);
 
