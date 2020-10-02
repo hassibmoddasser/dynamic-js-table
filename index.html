@@ -38,14 +38,18 @@
                   <td><input type="number" id="quantity-0" class="form-control form-control-sm" name="qtt[]" oninput="setTotal();setGrandTotal();" min="0"></td>
                   <td><input type="number" id="price-0" class="form-control form-control-sm prices" name="price[]" oninput="setTotal();setGrandTotal();"></td>
                   <td><input type="text" id="total-0" class="form-control form-control-sm" name="total[]" value="0" readonly></td>
-                  <td><button type="button" id="add" class="btn btn-secondary btn-sm"><i class="fa fa-plus"></i></button></td>
+                  <td><button type="button" id="0" class="btn btn-danger btn-sm remove"><i id="0" class="fa fa-trash"></i></button></td>
                 </tr>
               <tbody>
             </table>
+
+            <div class="btn-container p-2">
+              <button type="button" id="add" class="btn btn-success btn-sm text-uppercase"><i class="fa fa-plus"></i> Add Row</button>
+            </div>
             <input id="counter" type="hidden" value="1">
           </div>
           
-          <div class="details mr-5">
+          <div class="details">
             <div class="col-md-4 ml-auto mt-5">
               <div class="form-group row mb-2">
                 <label for="sub-total" class="col-md-5 control-label font-weight-bold text-right">Sub total</label>
