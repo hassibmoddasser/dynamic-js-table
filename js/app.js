@@ -33,7 +33,7 @@ document.addEventListener('click', (e) => {
     document.getElementById('row-' + removeButtonID).remove();
 
     let tableRows = document.querySelectorAll('.append-area tr').length;
-    for (let i = 1; i < tableRows; i++) {
+    for (let i = 0; i < tableRows; i++) {
       document.querySelectorAll('.append-area tr')[i].id = 'row-' + i;
       document.querySelectorAll('.append-area tr#row-' + i + ' td input')[0].id = 'product-' + i;
       document.querySelectorAll('.append-area tr#row-' + i + ' td input')[1].id = 'unit-' + i;
@@ -51,12 +51,14 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Form RESET
 function pageReset() {
   if (confirm("Do you want to reset the form?")) {
     location.reload();
   }
 }
 
+// Calculate row TOTAL
 function setTotal() {
   let tableRows = document.querySelectorAll('tbody.append-area tr').length;
 
@@ -73,10 +75,13 @@ function setTotal() {
     }
     subTotal += rowTotal;
   }
+
+  // Set TOTAL & GRAND TOTAL values
   subTotalUI.value = subTotal;
   grandTotalUI.value = subTotal;
 }
 
+// Calculate DISCOUNT & TAX
 function setGrandTotal() {
   let subTotal = subTotalUI.value;
   let discount = discountUI.value;
