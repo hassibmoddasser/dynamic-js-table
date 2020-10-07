@@ -23,22 +23,22 @@
             <table id="my-table" class="table table-hover table-borderless">
               <thead class="thead-dark">
                 <tr>
+                  <th></th>
                   <th style="width: 30%">Product</th>
                   <th>Unit</th>
                   <th>Quantity</th>
                   <th>Price</th>
                   <th>Total</th>
-                  <th></th>
                 </tr>
               </thead>
               <tbody class="append-area">
                 <tr id="row-0">
+                  <td><button type="button" id="0" class="btn btn-danger btn-sm remove"><i id="0" class="fa fa-trash"></i></button></td>
                   <td><input type="text" id="product-0" class="form-control form-control-sm" name="product[]"></td>
                   <td><input type="text" id="unit-0" class="form-control form-control-sm units" name="unit[]"></td>
                   <td><input type="number" id="quantity-0" class="form-control form-control-sm" name="qtt[]" oninput="setTotal();setGrandTotal();" min="0"></td>
                   <td><input type="number" id="price-0" class="form-control form-control-sm prices" name="price[]" oninput="setTotal();setGrandTotal();"></td>
                   <td><input type="text" id="total-0" class="form-control form-control-sm" name="total[]" value="0" readonly></td>
-                  <td><button type="button" id="0" class="btn btn-danger btn-sm remove"><i id="0" class="fa fa-trash"></i></button></td>
                 </tr>
               <tbody>
             </table>
