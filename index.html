@@ -18,6 +18,13 @@
     <div class="row">
       <div class="col-md-10 mx-auto">
         <h1 class="text-center">Dynamic table</h1>
+        
+        <!-- ADD ROW BUTTON -->
+        <div class="btn-container pb-3">
+          <button type="button" id="add" class="btn btn-success btn-sm text-uppercase"><i class="fa fa-plus"></i> Add Row</button>
+        </div>
+
+        <!-- DYNAMIC TABLE'S FORM -->
         <form id="form" class="form-horizontal" autocomplete="off">
           <div class="table-responsive">
             <table id="my-table" class="table table-hover table-borderless">
@@ -43,14 +50,13 @@
               <tbody>
             </table>
 
-            <div class="btn-container p-2">
-              <button type="button" id="add" class="btn btn-success btn-sm text-uppercase"><i class="fa fa-plus"></i> Add Row</button>
-            </div>
+            <!-- COUNTER HIDDEN INPUT -->
             <input id="counter" type="hidden" value="1">
           </div>
           
+          <!-- DETAILS AREA -->
           <div class="details">
-            <div class="col-md-4 ml-auto mt-5">
+            <div class="col-md-4 ml-auto mt-3">
               <div class="form-group row mb-2">
                 <label for="sub-total" class="col-md-5 control-label font-weight-bold text-right">Sub total</label>
                 <div class="col-md-7 p-0">
