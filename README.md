@@ -19,3 +19,12 @@ Dynamic tables enables the user to append rows for purchase of sale transactions
 - New ADD ROW button apart from the table
 - Updated UI elements' style
 - Code optimizations
+
+### **Version 1.3.0**
+- Dynamic generation of table rows when `DOMContentLoaded`
+- Event handling optimizations
+- UI & UX improvements
+- Added `INITIAL_TABLE_ROWS` constant in `app.js`
+```JavaScript
+const INITIAL_TABLE_ROWS = 5;
+```
