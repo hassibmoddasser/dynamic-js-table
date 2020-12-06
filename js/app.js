@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Fire event oninput of TAX and DISCOUNT fields
+taxUI.addEventListener('input', setGrandTotal);
+discountUI.addEventListener('input', setGrandTotal);
+
 // Fire event when CANCEL button clicked
 cancelButtonUI.addEventListener('click', () => {
   if (confirm("Do you want to reset the form?")) {
@@ -46,7 +50,7 @@ addButtonUI.addEventListener('click', () => {
 // Delete table rows
 document.addEventListener('click', (e) => {
   let elClassList = e.target.classList;
-  if (elClassList.contains('fa-trash') || elClassList.contains('remove')) {
+  if (elClassList.contains('fa-minus-circle') || elClassList.contains('remove')) {
     let removeButtonID = e.target.id;
     document.getElementById('row-' + removeButtonID).remove();
 
@@ -75,8 +79,8 @@ function setTotal() {
 
   let subTotal = 0;
   for (let i = 0; i < tableRows; i++) {
-    let quantity = parseInt(document.getElementById("quantity-" + i).value);
-    let price = parseInt(document.getElementById("price-" + i).value);
+    let quantity = Number(document.getElementById("quantity-" + i).value);
+    let price = Number(document.getElementById("price-" + i).value);
 
     let rowTotal = 0;
     if (document.getElementById("quantity-" + i).value == "" || document.getElementById("price-" + i).value == "") {
@@ -101,6 +105,6 @@ function setGrandTotal() {
   grandTotalUI.value = subTotal - discount;
   if (tax != 0) {
     let taxValue = (grandTotalUI.value * tax) / 100;
-    grandTotalUI.value = parseInt(grandTotalUI.value) + taxValue;
+    grandTotalUI.value = Number(grandTotalUI.value) + taxValue;
   }
 }
