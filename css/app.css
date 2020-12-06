@@ -17,6 +17,10 @@ input[type=reset] {
     padding: 0.4rem;
 }
 
+.table th {
+    vertical-align: middle;
+}
+
 .control-label {
     margin: auto;
 }
