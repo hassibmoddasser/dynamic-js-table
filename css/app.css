@@ -2,9 +2,14 @@ body {
     font-family: 'Kulim Park', sans-serif;
 }
 
-.form-control,
-.btn {
-    border-radius: 0px !important;
+button,
+input[type=submit],
+input[type=reset] {
+    border-radius: 3px !important;
+}
+
+.form-control {
+    border-radius: 3px !important;
 }
 
 .table td,
@@ -25,4 +30,3 @@ body {
     text-align: center;
     font-size: 14px;
 }
-
