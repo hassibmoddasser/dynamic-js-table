@@ -6,13 +6,31 @@ const grandTotalUI = document.getElementById('grand-total');
 
 const appendAreaUI = document.querySelector('.append-area');
 const addButtonUI = document.getElementById('add');
+const cancelButtonUI = document.getElementById('btn-reset');
+
+// Program variables
+const INITIAL_TABLE_ROWS = 5;
+
+// Dynamically add 5 rows when DOM content loaded
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 0; i < INITIAL_TABLE_ROWS; i++) {
+    addButtonUI.click();
+  }
+});
+
+// Fire event when CANCEL button clicked
+cancelButtonUI.addEventListener('click', () => {
+  if (confirm("Do you want to reset the form?")) {
+    location.reload();
+  }
+});
 
 // Append rows to table
 addButtonUI.addEventListener('click', () => {
   let counter = parseInt(document.getElementById('counter').value);
   appendAreaUI.insertAdjacentHTML('beforeend', `
     <tr id="row-${counter}">
-      <td><button type="button" id="${counter}" class="btn btn-danger btn-sm remove"><i id="${counter}" class="fa fa-trash"></i></button></td>
+      <td><button type="button" id="${counter}" class="btn btn-danger btn-sm remove"><i id="${counter}" class="fa fa-minus-circle"></i></button></td>
       <td><input type="text" id="product-${counter}" class="form-control form-control-sm" name="product[]"></td><td><input type="text" id="unit-${counter}" class="form-control form-control-sm" name="unit[]"</td>
       <td><input type="number" id="quantity-${counter}" class="form-control form-control-sm" name="qtt[]" oninput="setTotal();setGrandTotal();" min="0"></td>
       <td><input type="number" id="price-${counter}" class="form-control form-control-sm" name="price[]" oninput="setTotal();setGrandTotal();"></td>
@@ -50,13 +68,6 @@ document.addEventListener('click', (e) => {
     setGrandTotal();
   }
 });
-
-// Form RESET
-function pageReset() {
-  if (confirm("Do you want to reset the form?")) {
-    location.reload();
-  }
-}
 
 // Calculate row TOTAL
 function setTotal() {
