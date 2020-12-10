@@ -6,7 +6,7 @@ Dynamic tables enables the user to append rows for purchase of sale transactions
 
 ### **Version 1.0.0**
 
-### **Version 1.1.0**
+### **Version 2.0.0**
 
 - Dropped `jQuery`
 - Updated `Bootstrap` to `v5.4`
@@ -14,13 +14,13 @@ Dynamic tables enables the user to append rows for purchase of sale transactions
 - Added Voucher `discount` and `tax`
 - Updated UI elements' style
 
-### **Version 1.2.0**
+### **Version 2.1.0**
 
 - New ADD ROW button apart from the table
 - Updated UI elements' style
 - Code optimizations
 
-### **Version 1.3.0**
+### **Version 2.2.0**
 - Dynamic generation of table rows when `DOMContentLoaded`
 - Event handling optimizations
 - UI & UX improvements
